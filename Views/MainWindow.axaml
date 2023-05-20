@@ -3,6 +3,7 @@
     Height="250"
     Icon="/Assets/avalonia-logo.ico"
     Padding="5"
+    RequestedThemeVariant="Light"
     Title="CommandSample"
     Width="400"
     WindowStartupLocation="CenterScreen"
@@ -43,6 +44,7 @@
                 <TextBox
                     DockPanel.Dock="Left"
                     Margin="0,0,5,0"
+                    Padding="8,8,6,8"
                     Text="{Binding RobotName}"
                     Watermark="Robot Name"
                     Width="100" />
