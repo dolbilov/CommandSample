@@ -1,4 +1,4 @@
-# 🌦 CommandSample
+# 🤖 CommandSample
 
 ![License](https://img.shields.io/github/license/dolbilov/CommandSample)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dolbilov/CommandSample)
