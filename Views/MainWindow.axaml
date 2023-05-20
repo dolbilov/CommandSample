@@ -84,9 +84,9 @@
             Grid.Row="2"
             Margin="5">
             <Grid ColumnDefinitions="*, Auto">
-                <ItemsRepeater
+                <ItemsControl
                     Grid.Row="0"
-                    Items="{Binding ConversationLog}"
+                    ItemsSource="{Binding ConversationLog}"
                     Margin="5" />
                 <Button
                     Command="{ReflectionBinding ConversationLog.Clear}"
