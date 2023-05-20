@@ -13,10 +13,15 @@
     x:Class="CommandSample.Views.MainWindow"
     x:DataType="vm:MainWindowViewModel"
     xmlns="https://github.com/avaloniaui"
+    xmlns:conv="using:CommandSample.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:CommandSample.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Window.Resources>
+        <conv:ButtonTextConverter x:Key="ButtonTextConverter" />
+    </Window.Resources>
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
@@ -51,7 +56,7 @@
                 <Button
                     Command="{Binding OpenThePodBayDoorsFellowRobotCommand}"
                     CommandParameter="{Binding RobotName}"
-                    Content="{Binding RobotName, StringFormat='Open the Pod Bay for {0}.', TargetNullValue='No other robots here.'}"
+                    Content="{Binding RobotName, Converter={StaticResource ButtonTextConverter}}"
                     HorizontalAlignment="Stretch"
                     HorizontalContentAlignment="Center" />
             </DockPanel>
